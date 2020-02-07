@@ -137,3 +137,29 @@ PUT/PATCH ```localhost:3000/orders/1```
 
 #### 10. Delete order
 DELETE ```localhost:3000/orders/1```
+
+### Running Test
+```
+rspec spec/requests/create_inventory_spec.rb
+```
+```
+rspec spec/requests/create_order_spec.rb
+```
+```
+rspec spec/requests/delete_inventory_spec.rb
+```
+```
+rspec spec/requests/delete_order_spec.rb
+```
+```
+rspec spec/requests/get_inventories_spec.rb
+```
+```
+rspec spec/requests/get_orders_spec.rb
+```
+```
+rspec spec/requests/update_inventory_spec.rb
+```
+```
+rspec spec/requests/update_order_spec.rb
+```
