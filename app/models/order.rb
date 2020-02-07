@@ -47,13 +47,11 @@ class Order < ApplicationRecord
           quantity: item[:quantity],
           order_id: self.id
       )
-      p order_item.inventory.status
       if order_item.inventory.status == "active"
         order_items << order_item
       else
         errors.add(:order_item, "does not exist")
       end
-      p order_items
     end
     if order_items.size > 0
       self.order_items = order_items
