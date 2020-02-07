@@ -10,7 +10,6 @@ describe "get all orders route", :type => :request do
 
   before {get '/orders'}
   it 'returns all orders' do
-    p response.body
     expect(JSON.parse(response.body).size).to eq(1)
   end
   it 'check order items for an order' do
@@ -40,7 +39,6 @@ describe "get one inventory route", :type => :request do
   end
   before {get '/orders/' + @order.id.to_s}
   it 'check order items for an order' do
-    p response.body
     expect(JSON.parse(response.body)['order_items'].size).to eq(1)
   end
   it 'returns status code 302' do
