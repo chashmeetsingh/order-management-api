@@ -72,7 +72,7 @@ class OrdersController < ApplicationController
   end
 
   def excluded_params
-    [:created_at, :updated_at]
+    [:updated_at, :id]
   end
 
   def joined_params_exclude_config
